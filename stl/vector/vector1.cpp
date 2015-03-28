@@ -37,9 +37,15 @@ int main(int argc, char* argv[])
     cout<<endl;
 
     //扩容观察
-    vecDynamicIntegerArray.push_back(10);
     cout<<"size="<<vecDynamicIntegerArray.size()<<"    capacity="<<vecDynamicIntegerArray.capacity()<<endl;
     //size=1,capacity=1
+
+    for (int i=0;i<200;i++)
+    {
+        vecDynamicIntegerArray.push_back(10);
+        cout<<"i="<<i<<"    size="<<vecDynamicIntegerArray.size()<<"    capacity="<<vecDynamicIntegerArray.capacity()<<endl;
+    }
+    //capacity以指数介增长，2的n次方
     return 0;
 }
 
