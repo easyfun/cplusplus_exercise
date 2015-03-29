@@ -69,12 +69,15 @@ int main(int argc,char* argv[])
     // const，非const迭代器
     // 修改内部元素的值
     const vector<Person>::iterator i0=personArray.begin();
-    (*i0).SetAge(10);
+    (*i0).SetAge(10);//ok
 
     vector<Person>::iterator const citor=personArray.begin();
     cout<<(*citor).GetAge()<<endl;
     (*citor).SetAge(990);
     
+    vector<Person>::const_iterator ci0=personArray.begin();
+//    (*ci0).SetAge(10);//fail
+
     vector<Person>::iterator r_iterator=personArray.begin();
     while(r_iterator!=personArray.end())
     {
