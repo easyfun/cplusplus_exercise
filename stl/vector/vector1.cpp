@@ -46,6 +46,14 @@ int main(int argc, char* argv[])
         cout<<"i="<<i<<"    size="<<vecDynamicIntegerArray.size()<<"    capacity="<<vecDynamicIntegerArray.capacity()<<endl;
     }
     //capacity以指数介增长，2的n次方
+    
+    for (int i=0;i<200;i++)
+    {
+        vecArrayWithTenElements.push_back(10);
+        cout<<"i="<<i<<"   size="<<vecArrayWithTenElements.size()<<"   capacity="<<vecArrayWithTenElements.capacity()<<endl;
+    }
+
+    //capacity以指数介增长，2的n次方
     return 0;
 }
 
